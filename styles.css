@@ -59,19 +59,31 @@ a.logo {
   color: #00b4d8;
 }
 
-/* ABOUT Section */
+/*-------- ABOUT Section -------- */
 .container {
   margin: 0 20px;
 }
 .about {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 650px auto;
+  gap: 2rem;
 }
 .about-content {
-  width: 50%;
+  grid-column: 1;
+  grid-row: 1;
   border: 2px solid #fff;
   border-radius: 6px;
   transition: all 0.5s;
+}
+.tools {
+  grid-column: 2;
+  grid-row: 1;
+  border: 2px solid #fff;
+}
+.skills {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  border: 2px solid #fff;
 }
 .about-content:hover {
   box-shadow: 5px 5px 15px #5e5e5e;
@@ -82,9 +94,6 @@ a.logo {
 }
 .about-content h2 {
   color: #2a9d8f;
-}
-.tools {
-  width: 40%;
 }
 .languages img {
   width: 70px;
